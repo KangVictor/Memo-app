@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<view class="contain">
+  <view class="userinfo">
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+
+  <view class="newTaskWrapper">
+    <input class="enterTask" bindinput="onTaskNameInput" placeholder="What to memorize?"></input>
+    <button class="enterButton" bindtap="onNewTask"> add </button>
+  </view>
+
+  <label class="small-title">On work</label>
+  <view wx:for="{{tasks}}" wx:for-index="idx" wx:for-item="task">
+    <taskBox wx:if="{{task.deleted==false && task.checked==false}}" bind:ondelete="onDelete" bind:oncheck="onCheck" 
+    taskNumber="{{idx}}" taskName="{{task.taskName}}" checked="{{task.checked}}"/>
+  </view>
+
+  <label class="small-title">Memorized</label>
+  <view wx:for="{{tasks}}" wx:for-index="idx" wx:for-item="task">
+    <taskBox wx:if="{{task.deleted==false && task.checked==true}}" bind:ondelete="onDelete" bind:oncheck="onCheck" 
+    taskNumber="{{idx}}" taskName="{{task.taskName}}" checked="{{task.checked}}"/>
+  </view>
+</view>

@@ -1,0 +1,61 @@
+/**index.wxss**/
+.contain {
+  display: flex;
+  flex-direction: column;
+  margin: 15rpx;
+}
+
+.newTaskWrapper{
+  display: flex;
+  flex-direction: row;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+.enterTask{
+  font-size: 40rpx;
+  width: 1000rpx;
+}
+
+.enterButton{
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  /* padding-top: 5rpx;
+  padding-bottom: 5rpx; */
+  /* width: 70rpx;
+  height: 48rpx; */
+  align-self: center;
+  text-align: center;
+  border-radius: 20rpx;
+  font-size: 25rpx;
+  margin-left: 5rpx;
+  /* margin: 5rpx; */
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.small-title{
+  font-size: 55rpx;
+  font:red;
+}

@@ -1,0 +1,9 @@
+<!--pages/taskBox.wxml-->
+<view class = "inputBoxWrapper" id="{{taskName}}" bindtap="onFlip">
+  <view class="textCheckerContainer">
+    <checkbox value="{{taskName}}" bindtap="onCheck" checked="{{checked}}"/>
+    <text class = "smallText"> {{taskName}} </text>
+  </view>
+  <button bindtap="onDelete">delete</button>
+</view>
+ 
